@@ -1,15 +1,18 @@
 import {
-    
+  //공지사항
+  FETCH_GONGZI,
+  FETCH_GONGZI_LIST,
   
-    // 뉴스 크롤링
-    //CRAWL_START,
+    
   } from "./mutation-types";
   
   export default {
     
-  
-    //[CRAWL_START](state, payload) {
-      //state.lists = payload;
-    //},
+    [FETCH_GONGZI_LIST](state, gongzis) {
+      state.gongzis = gongzis;
+    },
+    [FETCH_GONGZI](state, gongzi) {
+      state.gongzi = gongzi;
+    },
   };
   

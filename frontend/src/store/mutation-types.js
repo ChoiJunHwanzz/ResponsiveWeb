@@ -1,3 +1,3 @@
-
-//크롤링
-//export const CRAWL_START = 'CRAWL_START'
+//공지사항
+export const FETCH_GONGZI_LIST = 'FETCH_GONGZI_LIST'
+export const FETCH_GONGZI = 'FETCH_GONGZI'

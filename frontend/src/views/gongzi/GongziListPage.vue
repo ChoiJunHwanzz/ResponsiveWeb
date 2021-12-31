@@ -1,7 +1,7 @@
 <template>
 	<v-container>
 		<h2>공지사항</h2>
-		<v-btn  @click="gongziRegister" outlined class="float-right">글쓰기</v-btn>
+		<v-btn v-if="auth" @click="gongziRegister" outlined class="float-right">글쓰기</v-btn>
 		<gongzi-list :gongzis="gongzis"/>
 	</v-container>
 </template>
@@ -17,6 +17,7 @@ export default {
 	},
 	data() {
 		return{
+			auth: '관리자',
 		}
 	},
 	computed: {
@@ -24,10 +25,11 @@ export default {
 	},
 	mounted () {
 		this.fetchGongziList()
-		if (this.userInfo.authList) {
-			if (this.userInfo.authList[0].auth == '관리자') {
+		{
+			if (this.auth == '관리자') {
 				this.auth = 1
 			}
+			console.log("auth:" + this.auth)
 		}
 	},
 	methods: {

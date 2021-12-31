@@ -23,9 +23,10 @@ export default {
 		}
 	},
 	computed: {
-		
+
 	},
 	mounted () {
+
 	},
 	methods: {
 		register () {
@@ -33,8 +34,8 @@ export default {
 			this.$emit('submit', { title, description })
 		},
 		goBack () {
-			this.$router.go(-1)
-		}
+      this.$router.go(-1)
+    }
 	}
 }
 </script>
